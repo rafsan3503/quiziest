@@ -12,7 +12,7 @@ const Quizs = ({ topic }) => {
             <a
               rel="noopener noreferrer"
               href="/"
-              className="text-xs tracking-wider uppercase hover:underline text-black"
+              className="text-xs tracking-wider uppercase hover:underline text-indigo-400"
             >
               Total: {total}
             </a>
