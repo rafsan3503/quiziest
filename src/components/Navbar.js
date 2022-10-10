@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/favicon.png";
 
 export const Nav = () => {
@@ -7,47 +8,49 @@ export const Nav = () => {
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
-        <a
-          href="/"
-          aria-label="Company"
-          title="Company"
+        <Link
+          to="/"
+          aria-label="Home"
+          title="Home"
           className="inline-flex items-center"
         >
           <img className="w-10" src={logo} alt="" />
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             Quiziest
           </span>
-        </a>
+        </Link>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
+            <Link
+              to="/"
+              aria-label="Quiz-home"
+              title="Quiz Home"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Quiz-home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            <NavLink
+              to="/statistics"
+              aria-label="Statistics"
+              title="Statistics"
+              className={({ isActive }) =>
+                isActive ? 'bg-indigo-500 text-white p-3 rounded' : 'text-indigo-400'
+              }
             >
               Statistics
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href="/"
+            <NavLink
+              href="/blog"
               aria-label="Product pricing"
               title="Product pricing"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className="{({isActive})=> isActive ?  text-blue-700 : text-gray-700}"
             >
               Blog
-            </a>
+            </NavLink>
           </li>
         </ul>
 
