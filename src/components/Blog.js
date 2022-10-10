@@ -25,9 +25,10 @@ const Blog = () => {
                 </a>
                 <p className="mb-2 text-gray-700">
                   React Router is a state container for the current location ,
-                  or URL. It keeps track of the location and renders different
-                  routes as it changes, and it also gives you tools to update
-                  the location using Link s and the history API.
+                  or URL. <br />
+                   It keeps track of the location and renders different
+                  routes as it changes,<br /> and it also gives you tools to update
+                  the location using <br /> Link s and the history API.
                 </p>
               </div>
             </div>
@@ -48,7 +49,7 @@ const Blog = () => {
                 </a>
                 <p className="mb-2 text-gray-700">
                   The React Context API is a way for a React app to effectively
-                  produce global variables that can be passed around. This is
+                  produce global variables that can be passed around. <br /> This is
                   the alternative to "prop drilling" or moving props from
                   grandparent to child to parent, and so on. Context is also
                   touted as an easier, lighter approach to state management

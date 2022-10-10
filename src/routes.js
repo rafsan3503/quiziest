@@ -3,6 +3,7 @@ import Blog from "./components/Blog";
 import ErrorPage from "./components/ErrorPage";
 import { Header } from "./components/Home";
 import Quiztopics from "./components/Quiztopics";
+import Statistics from "./components/Statistics";
 import Main from "./layout/Main";
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog/>
+            },
+            {
+                path: 'statistics',
+                element: <Statistics/>
             }
         ]
     }
