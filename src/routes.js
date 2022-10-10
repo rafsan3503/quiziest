@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Blog from "./components/Blog";
 import ErrorPage from "./components/ErrorPage";
 import { Header } from "./components/Home";
 import Quiztopics from "./components/Quiztopics";
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
                   );  
                 },
                 element: <Quiztopics/>
+            },
+            {
+                path: '/blog',
+                element: <Blog/>
             }
         ]
     }
