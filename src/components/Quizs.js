@@ -12,14 +12,14 @@ const Quizs = ({ topic }) => {
             <a
               rel="noopener noreferrer"
               href="/"
-              className="text-xs tracking-wider uppercase hover:underline dark:text-violet-400"
+              className="text-xs tracking-wider uppercase hover:underline text-black"
             >
               Total: {total}
             </a>
-            <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
+            <h3 className="flex-1 py-2 text-lg font-semibold text-indigo-500">
               {name}
             </h3>
-            <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+            <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-white">
               <Link to={`/quiz/${id}`} className="bg-indigo-400 py-2 px-6 flex items-center font-bold text-white rounded-lg">
                 Start Quiz
                 <ArrowRightIcon className='w-4 h-4'></ArrowRightIcon>

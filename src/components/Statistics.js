@@ -17,13 +17,11 @@ const Statistics = () => {
     console.log(data)
     return (
       <div>
-        <h2 className="text-center text-5xl font-bold text-indigo-400">
+        <h2 className="text-center text-5xl font-bold text-indigo-400 my-5">
           Statistics With Chart
         </h2>
         <div
           data-aos="zoom-out"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
           className="lg:flex justify-center min-h-screen items-center"
         >
           <LineChart

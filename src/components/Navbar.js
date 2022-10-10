@@ -6,7 +6,7 @@ export const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 z-10">
       <div className="relative flex items-center justify-between">
         <Link
           to="/"
@@ -64,7 +64,7 @@ export const Nav = () => {
           </li>
         </ul>
 
-        <div className="lg:hidden">
+        <div className="lg:hidden z-10">
           <button
             aria-label="Open Menu"
             title="Open Menu"
@@ -91,8 +91,8 @@ export const Nav = () => {
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <a
-                      href="/"
+                    <Link
+                      to="/"
                       aria-label="Company"
                       title="Company"
                       className="inline-flex items-center"
@@ -101,7 +101,7 @@ export const Nav = () => {
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         Quiziest
                       </span>
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <button
@@ -122,34 +122,34 @@ export const Nav = () => {
                 <nav>
                   <ul className="space-y-4">
                     <li>
-                      <a
-                        href="/"
+                      <NavLink
+                        to="/home"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Quiz-home
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link
+                        to="/statistics"
                         aria-label="Our product"
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Statistics
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="/"
+                      <Link
+                        to="/blog"
                         aria-label="Product pricing"
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Blog
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
