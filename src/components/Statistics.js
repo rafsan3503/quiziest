@@ -16,9 +16,16 @@ const Statistics = () => {
     const data = useLoaderData().data;
     console.log(data)
     return (
-        <div>
-            <h2 className='text-center text-5xl font-bold text-indigo-400'>Statistics With Chart</h2>
-        <div className="lg:flex justify-center min-h-screen items-center">
+      <div>
+        <h2 className="text-center text-5xl font-bold text-indigo-400">
+          Statistics With Chart
+        </h2>
+        <div
+          data-aos="zoom-out"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          className="lg:flex justify-center min-h-screen items-center"
+        >
           <LineChart
             width={500}
             height={300}
@@ -32,7 +39,7 @@ const Statistics = () => {
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
-            <YAxis dataKey='total'/>
+            <YAxis dataKey="total" />
             <Tooltip />
             <Legend />
             <Line

@@ -23,7 +23,12 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
         }
     }
     return (
-      <div className="w-11/12 lg:w-1/2 mx-auto p-4 shadow-lg rounded-lg my-3 relative">
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        className="w-11/12 lg:w-1/2 mx-auto p-4 shadow-lg rounded-lg my-3 relative"
+      >
         <ToastContainer position="top-center"></ToastContainer>
         <EyeIcon
           onClick={() => showAnswer(question.correctAnswer)}
