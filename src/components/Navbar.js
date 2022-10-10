@@ -15,20 +15,24 @@ export const Nav = () => {
           className="inline-flex items-center"
         >
           <img className="w-10" src={logo} alt="" />
-          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+          <span className="ml-2 text-xl font-bold tracking-wide text-indigo-500 uppercase">
             Quiziest
           </span>
         </Link>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <Link
-              to="/"
-              aria-label="Quiz-home"
+            <NavLink
+              to="/home"
+              aria-label="Home"
               title="Quiz Home"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-indigo-500 text-white p-3 rounded-lg font-medium"
+                  : "text-indigo-600 p-3 font-medium"
+              }
             >
               Quiz-home
-            </Link>
+            </NavLink>
           </li>
           <li>
             <NavLink
@@ -36,7 +40,9 @@ export const Nav = () => {
               aria-label="Statistics"
               title="Statistics"
               className={({ isActive }) =>
-                isActive ? 'bg-indigo-500 text-white p-3 rounded' : 'text-indigo-400'
+                isActive
+                  ? "bg-indigo-500 text-white p-3 rounded-lg font-medium"
+                  : "text-indigo-600 p-3 font-medium"
               }
             >
               Statistics
@@ -44,10 +50,14 @@ export const Nav = () => {
           </li>
           <li>
             <NavLink
-              href="/blog"
+              to="/blog"
               aria-label="Product pricing"
               title="Product pricing"
-              className="{({isActive})=> isActive ?  text-blue-700 : text-gray-700}"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-indigo-500 text-white p-3 rounded-lg font-medium"
+                  : "text-indigo-600 p-3 font-medium"
+              }
             >
               Blog
             </NavLink>
