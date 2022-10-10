@@ -17,3 +17,5 @@
 <hr>
 
 <h2>Api Links</h2>
+<p>Quiz Topics API: https://openapi.programming-hero.com/api/quiz</p>
+<p>Dynamic API: https://openapi.programming-hero.com/api/quiz/${id}</p>
