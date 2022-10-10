@@ -1,78 +1,49 @@
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import React from "react";
 import {
-  LineChart,
-    Line,
-    BarChart,
+    AreaChart,
+    Area,
   Bar,
+  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
 
 const Statistics = () => {
-    const data = useLoaderData().data;
-    console.log(data)
+    const loadData = useLoaderData();
+    const data = loadData.data;
     return (
-      <div>
-        <h2 className="text-center text-5xl font-bold text-indigo-400 my-5">
-          Statistics With Chart
-        </h2>
-        <div
-          data-aos="zoom-out"
-          className="lg:flex justify-center min-h-screen items-center"
-        >
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis dataKey="total" />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="name"
-              stroke="#8884d8"
-              strokeDasharray="5 5"
-            />
-            <Line
-              type="monotone"
-              dataKey="total"
-              stroke="#82ca9d"
-              strokeDasharray="3 4 5 2"
-            />
-          </LineChart>
-
-          <BarChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis dataKey="total" />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="name" fill="#8884d8" />
-            <Bar dataKey="total" fill="#82ca9d" />
-          </BarChart>
+      <div className='min-h-screen'>
+        <div className="w-full lg:w-1/2 mx-auto h-auto">
+          <h2 className="font-bold text-indigo-400 text-5xl text-center my-5">
+            Statistics Chart
+          </h2>
+          <ResponsiveContainer>
+            <AreaChart
+              data={data}
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="total"
+                stroke="#8884d8"
+                fill="#8884d8"
+              />
+            </AreaChart>
+          </ResponsiveContainer>
         </div>
       </div>
     );
