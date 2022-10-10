@@ -39,8 +39,8 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
         </h1>
         <div className="p-5">
           <ol className="list-decimal text-indigo-600">
-            {question.options.map((option) => (
-              <li
+            {question.options.map((option,_idx) => (
+              <li key={_idx}
                 className="my-3 border-2 cursor-pointer p-2 rounded"
                 onClick={(e) => checkAnswer(e)}
               >

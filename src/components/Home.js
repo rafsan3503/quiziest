@@ -40,8 +40,8 @@ export const Header = () => {
       </div>
 
       <div className="my-10 w-9/12 mx-auto">
-        <div class="space-y-2 text-center mb-5">
-          <h2 class="text-3xl font-bold text-indigo-400">
+        <div className="space-y-2 text-center mb-5">
+          <h2 className="text-3xl font-bold text-indigo-400">
             Choose a topics to get started
           </h2>
         </div>
