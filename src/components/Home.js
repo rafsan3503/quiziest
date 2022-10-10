@@ -1,5 +1,10 @@
+import { useLoaderData } from "react-router-dom";
 import banner from "../assets/banner.jpg";
+import Quizs from "./Quizs";
 export const Header = () => {
+    const topicsData = useLoaderData();
+    const topics = topicsData.data;
+    
   return (
     <div>
       <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
@@ -34,12 +39,15 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="mt-10">
-        <div class="space-y-2 text-center">
-          <h2 class="text-3xl font-bold">Select Your Quiz</h2>
-          <p class="font-serif text-sm dark:text-gray-400">
-            Qualisque erroribus usu at, duo te agam soluta mucius.
-          </p>
+      <div className="my-10 w-9/12 mx-auto">
+        <div class="space-y-2 text-center mb-5">
+          <h2 class="text-3xl font-bold">Select Your Quiz Topics</h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+          {topics.map((topic) => (
+            <Quizs topic={topic} key={topic.id}></Quizs>
+          ))}
         </div>
       </div>
     </div>
