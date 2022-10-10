@@ -18,7 +18,7 @@ const Statistics = () => {
     const data = loadData.data;
     return (
       <div className='min-h-screen'>
-        <div className="w-full lg:w-1/2 mx-auto h-auto">
+        <div className="w-full lg:w-1/2 mx-auto h-full">
           <h2 className="font-bold text-indigo-400 text-5xl text-center my-5">
             Statistics Chart
           </h2>
