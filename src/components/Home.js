@@ -26,7 +26,7 @@ export const Header = () => {
         <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
           <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
             <h2 className="mb-5 font-sans text-5xl font-bold tracking-tight text-indigo-400 sm:text-4xl sm:leading-none">
-              A diamond is forever
+              A short test of knowledge
             </h2>
             <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
               A quiz refers to a short test of knowledge, typically around 10
@@ -46,9 +46,7 @@ export const Header = () => {
           </h2>
         </div>
 
-        <div
-          className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
-        >
+        <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
           {topics.map((topic) => (
             <Quizs topic={topic} key={topic.id}></Quizs>
           ))}

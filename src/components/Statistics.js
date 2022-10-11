@@ -10,18 +10,44 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
+    ResponsiveContainer,
+    ComposedChart,
+  Line
 } from "recharts";
 
 const Statistics = () => {
     const loadData = useLoaderData();
     const data = loadData.data;
     return (
-      <div className='min-h-[700px] flex items-center'>
+      <div className="min-h-[80vh] flex-col justify-center items-evenly mt-10">
         <div className="w-full lg:w-1/2 mx-auto h-96">
-          <h2 className="font-bold text-indigo-400 text-5xl text-center my-5">
-            Statistics Chart
-          </h2>
+          <ResponsiveContainer>
+            <ComposedChart
+              data={data}
+              margin={{
+                top: 20,
+                right: 20,
+                bottom: 20,
+                left: 20,
+              }}
+            >
+              <CartesianGrid stroke="#f5f5f5" />
+              <XAxis dataKey="name" scale="band" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Area
+                type="monotone"
+                dataKey="Topics"
+                fill="#8884d8"
+                stroke="#8884d8"
+              />
+              <Bar dataKey="total" barSize={20} fill="#413ea0" />
+              <Line type="monotone" dataKey="name" stroke="#ff7300" />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="w-full lg:w-1/2 mx-auto h-96">
           <ResponsiveContainer>
             <AreaChart
               data={data}
