@@ -4,7 +4,7 @@ import React from 'react';
 const Blog = () => {
   
     return (
-      <div>
+      <div className='min-h-[90vh]'>
         <h2 className="text-center text-5xl font-bold text-indigo-400">
           Read Our Blogs
         </h2>
