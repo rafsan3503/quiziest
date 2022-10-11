@@ -15,7 +15,7 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
         console.log(question.correctAnswer, value);
         if (value === question.correctAnswer) {
             setCorrect(correct + 1)
-            toast.success("Your answer is Incorrect!!", { autoClose: 500 });
+            toast.success("Your answer is correct!!", { autoClose: 500 });
         }
         else {
             toast.error("Your answer is Incorrect!!", { autoClose: 500 });

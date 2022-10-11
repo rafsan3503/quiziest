@@ -17,7 +17,7 @@ const Statistics = () => {
     const loadData = useLoaderData();
     const data = loadData.data;
     return (
-      <div className='min-h-screen flex items-center'>
+      <div className='min-h-[700px] flex items-center'>
         <div className="w-full lg:w-1/2 mx-auto h-96">
           <h2 className="font-bold text-indigo-400 text-5xl text-center my-5">
             Statistics Chart
