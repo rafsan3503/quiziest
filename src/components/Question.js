@@ -11,22 +11,21 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
       toast.info(answer, { autoClose: 3000 });
       setOpen(!open);
     };
-    const checkAnswer = e => {
-        const value = e.target.innerText;
-        console.log(question.correctAnswer, value);
-        if (value === question.correctAnswer) {
-            setCorrect(correct + 1)
-          toast.success("Your answer is correct!!", { autoClose: 500 });
-          e.target.classList.remove('text-indigo-400');
-          e.target.classList.add('text-green-400');
-        }
-        else {
-            toast.error("Your answer is Incorrect!!", { autoClose: 500 });
-          setIncorrect(incorrect + 1);
-          e.target.classList.remove("text-indigo-400");
-          e.target.classList.add("text-red-400");
-        }
-    }
+    const checkAnswer = (e) => {
+      const value = e.target.innerText;
+      console.log(question.correctAnswer, value);
+      if (value === question.correctAnswer) {
+        setCorrect(correct + 1);
+        toast.success("Your answer is correct!!", { autoClose: 500 });
+        e.target.classList.remove("text-indigo-400");
+        e.target.classList.add("text-green-400");
+      } else {
+        toast.error("Your answer is Incorrect!!", { autoClose: 500 });
+        setIncorrect(incorrect + 1);
+        e.target.classList.remove("text-indigo-400");
+        e.target.classList.add("text-red-400");
+      }
+    };
     return (
       <div
         data-aos="fade-right"
@@ -51,8 +50,8 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
           <ol className="list-decimal text-indigo-600">
             {question.options.map((option, _idx) => (
               <li
+                className="my-3 border-2 cursor-pointer p-2 rounded relative"
                 key={_idx}
-                className="my-3 border-2 cursor-pointer p-2 rounded"
                 onClick={(e) => checkAnswer(e)}
               >
                 {option}

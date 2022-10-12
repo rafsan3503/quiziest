@@ -4,7 +4,7 @@ import React from 'react';
 const Blog = () => {
   
     return (
-      <div className='min-h-[90vh]'>
+      <div className="min-h-[90vh]">
         <h2 className="text-center text-5xl font-bold text-indigo-400">
           Read Our Blogs
         </h2>
@@ -77,14 +77,13 @@ const Blog = () => {
                   title="Film It!"
                   className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
-                  What is useHref hook in react?
+                  Why we use useRef in React?
                 </a>
                 <p className="mb-2 text-gray-700">
-                  The useHref hook returns a URL that may be used to link to the
-                  given to location, even outside of React Router. Tip: You may
-                  be interested in taking a look at the source for the Link
-                  component in react-router-dom to see how it uses useHref
-                  internally to determine its own href value.
+                  The useRef Hook allows you to persist values between renders.
+                  It can be used to store a mutable value that does not cause a
+                  re-render when updated. It can be used to access a DOM element
+                  directly.
                 </p>
               </div>
             </div>
