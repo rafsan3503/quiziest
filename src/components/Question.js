@@ -11,10 +11,8 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
       toast.info(answer, { autoClose: 3000 });
       setOpen(!open);
     };
-    const checkAnswer = (e) => {
-      const value = e.target.innerText;
-      console.log(question.correctAnswer, value);
-      if (value === question.correctAnswer) {
+  const checkAnswer = (opt, e) => {
+      if (opt === question.correctAnswer) {
         setCorrect(correct + 1);
         toast.success("Your answer is correct!!", { autoClose: 500 });
         e.target.classList.remove("text-indigo-400");
@@ -50,9 +48,9 @@ const Question = ({ question, correct,setCorrect,incorrect,setIncorrect }) => {
           <ol className="list-decimal text-indigo-600">
             {question.options.map((option, _idx) => (
               <li
-                className="my-3 border-2 cursor-pointer p-2 rounded relative"
+                className="my-3 border-2 cursor-pointer p-2 rounded"
                 key={_idx}
-                onClick={(e) => checkAnswer(e)}
+                onClick={(e) => checkAnswer(option, e)}
               >
                 {option}
               </li>
